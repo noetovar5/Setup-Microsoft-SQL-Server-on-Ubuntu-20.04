@@ -2,10 +2,11 @@
 # Setup-Microsoft-SQL-Server-on-Ubuntu-20.04
 Setup Microsoft SQL Server on Ubuntu 20.04
 # Setup Microsoft SQL Server on Ubuntu 20.04
-* 💻 
+* 💻 Youtube video to install ubuntu 20.04
+* 💻 Youtube video to install SQL Sever below
 YouTube Setup Microsoft SQL Server on Ubuntu 20.04
 🔗 <https://youtu.be/x6pYoWwtVAY>  
-* 💻 
+
  
 
 ## Update Ubuntu
