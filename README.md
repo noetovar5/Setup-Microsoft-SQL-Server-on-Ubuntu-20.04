@@ -1,13 +1,5 @@
-# Noe Tovar-MBA
-# Setup-Microsoft-SQL-Server-on-Ubuntu-20.04
+# Install SQL Server and create a database on Ubuntu
 Setup Microsoft SQL Server on Ubuntu 20.04
-# Setup Microsoft SQL Server on Ubuntu 20.04
-* 💻 Youtube video to install ubuntu 20.04
-* 💻 Youtube video to install SQL Sever below
-YouTube Setup Microsoft SQL Server on Ubuntu 20.04
- 
-
- 
 
 ## Update Ubuntu
 
@@ -18,25 +10,18 @@ sudo reboot
 ```
 ###  Import Microsoft public repository GPG key for Ubuntu
 ```bash
-sudo wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 ```
 ### Register the Microsoft SQL Server Ubuntu repository for SQL Server 2019
-```bash
 sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/20.04/mssql-server-2019.list)"
-```
 ### Install SQL Server
-```bash
-sudo apt update
-sudo apt install -y mssql-server
-```
+sudo apt-get update
+sudo apt-get install -y mssql-server
+
 ### Configure SQL server and set SA password
-```bash
 sudo /opt/mssql/bin/mssql-conf setup
-```
 ### Check SQL service is running
-```bash
 systemctl status mssql-server --no-pager
-```
 ### Check the listening port for MSSQL server
 ```bash
 sudo apt install net-tools
@@ -95,3 +80,5 @@ ON PRIMARY (FILENAME = '/var/opt/mssql/data/yourdbname.mdf'),
    (FILENAME = '/var/opt/mssql/data/yourdbname_log.ldf') 
 FOR ATTACH
 ```
+These instructions also available from learn.microsoft.com
+https://learn.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15&tabs=ubuntu2004
